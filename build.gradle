@@ -28,3 +28,12 @@ configurations {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+bootJar {
+    mainClassName = 'java.com.example.example.ExampleApplication'
+}
+
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
+}
