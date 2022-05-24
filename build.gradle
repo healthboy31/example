@@ -1,8 +1,13 @@
 plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.wildfly.build.provision' version "0.0.11"
     id 'java'
     id 'war'
+}
+
+provision {
+    variables['wildfly.version'] = '11.0.0.Final'
 }
 
 group = 'com.example'
